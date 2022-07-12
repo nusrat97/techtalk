@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+.registration-part .box{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 55px;
+}
+
+.registration-part h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color: #11175D;
+    margin: 0;
+    margin-top: 80px;
+}
+
+.registration-part p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    color: #11175D;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.registration-part .MuiFormHelperText-root{
+    color: red;
+    font-size: 14px;
+}
+
+.registration-part .msg{
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+.login-part .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 0;
+}
+
+.registration-part .login{
+    display: flex;
+    cursor: pointer;
+}
+
+.registration-part .option{
+    padding: 20px 40px;
+    padding-left: 70px;
+    border: 1px solid rgba(3, 1, 76, .3);
+    border-radius: 9px;
+    margin-top: 30px;
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+
+.registration-part .option img{
+    position: absolute;
+    top: 18px;
+    left: 30px;
+}
+
+.registration-part .msg a{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #EA6C00;
+    text-decoration: none;
+}
+
+.registration-part .eye{
+    position: relative;
+    width: 360px;
+}
+
+.registration-part .eyeicon{
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+}
+
+.leftbar{
+    height: 100vh;
+    background: #5F35F5;
+    margin: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.leftbar .profilepic{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+.leftbar li{
+    margin-top: 33px;
+    width: 130px;
+    margin-left: auto;
+    padding: 10px 0;
+    border-radius: 15px 0 0 15px;
+    position: relative;
+}
+
+.leftbar li:after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    background: #5F35F5;
+    content: '';
+    border-radius: 20px 0 0 20px;
+}
+
+.leftbar .active{
+    background: #fff;
+}
+
+.leftbar .icon{
+    font-size: 42px;
+    color: #FFF;
+    margin-left: -15px;
+}
+
+.leftbar .active .icon{
+    color: #5F35F5 !important;
+}
+
+.leftbar h5{
+    color: #FFF;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.leftbarmodal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftbarbox{
+    height: 300px;
+    width: 300px;
+    background: #FFF;
+}
+
+.search{
+    margin-top: 30px;
+    position: relative;
+}
+
+.search input{
+    width: 100%;
+    padding: 12px 78px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 0;
+    -webkit-box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.15);
+    box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.15);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(61, 61, 61, 0.35);
+}
+
+.search .searchicon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 23px;
+}
+
+.search .dotsicon{
+    position: absolute;
+    top: 53%;
+    transform: translateY(-50%);
+    right: 23px;
+    font-size: 20px;
+    color: #5F35F5;
+}
+
+.grouplist{
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 0;
+    -webkit-box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.15);
+    box-shadow: 0px 5px 8px -2px rgba(0,0,0,0.15);
+    position: relative;
+    height: 285px;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+
+.friendlist{
+    height: 660px;
+    margin-top: 30px;
+}
+
+.grouplist h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+}
+
+.grouplist .dotsicon{
+    position: absolute;
+    top: 10px;
+    right: 23px;
+    font-size: 20px;
+    color: #5F35F5;
+}
+
+.grouplist .box{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    padding-bottom: 13px;
+    margin-top: 17px;
+}
+
+.grouplist .name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grouplist .box:last-child{
+    border: 0;
+}
+
+.grouplist .box .img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.friendlist .box .img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.grouplist .box .name h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.friendlist .box .name h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.grouplist .box .name h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(77, 77, 77, 0.75);
+}
+
+.friendlist .box .name h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(77, 77, 77, 0.75);
+}
+
+.userlist .box .name h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.grouplist .box .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grouplist .box .button button{
+    background: #5F35F5;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.userlist .box .button button{
+    background: #5F35F5;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.friendlist .box .button p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
