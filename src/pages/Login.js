@@ -1,14 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Grid,TextField,Button,Collapse,Alert,IconButton} from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
-import { Link,useNavigate } from 'react-router-dom'
+import { Link,useLocation,useNavigate } from 'react-router-dom'
 import { AiFillEye,AiFillEyeInvisible } from 'react-icons/ai';
 import { getAuth, signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
     const auth = getAuth();
+    const location = useLocation()
     const navigate = useNavigate();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
+    const [msg, setMsg] = useState("");
+
+    // console.log(location.state)
+    useEffect(()=>{
+        // console.log(location.state == null)
+        if(location.state !== null){
+            setMsg(location.state.msg)
+            setOpen2(true)
+        }
+    },[]);
 
     let [email,setEmail] = useState("")
     let [password,setPassword] = useState("")
@@ -89,6 +101,26 @@ const Login = () => {
             <div className='box'>
                 <div className='left'>
                     <h2>Login to your account!</h2>
+                    <Collapse in={open2}>
+                        <Alert
+                        variant='filled'
+                        action={
+                            <IconButton
+                            aria-label="close"
+                            color="inherit"
+                            size="small"
+                            onClick={() => {
+                                setOpen2(false);
+                            }}
+                            >
+                            <CloseIcon fontSize="inherit" />
+                            </IconButton>
+                        }
+                        sx={{ mb: 2 }}
+                        >
+                        {msg}
+                        </Alert>
+                    </Collapse>
 
                     <div className='login'>
                         <div onClick={handleGoogleSignin} className='option'> <img src='./assets/images/google.png'/> Login with Google</div>
@@ -145,6 +177,7 @@ const Login = () => {
                     <Button onClick={handleClick} style={{marginTop: '20px',padding: '20px 0',width: '360px',borderRadius:'8px',background: '#5F35F5'}} variant="contained">Login to Continue</Button>
 
                     <p className='msg'>Don’t have an account ? <Link to="/">Sign up</Link> </p>
+                    <p className='forgot'>Forgot Password ? <Link to="/reset">Click Here</Link> </p>
                 </div>
             </div>
         </Grid>

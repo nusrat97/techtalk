@@ -4,10 +4,12 @@ import {Alert,Grid} from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import Leftbar from '../components/Leftbar';
 import Search from '../components/Search';
-import Grouplist from '../components/Grouplist';
+import GroupList from '../components/GroupList';
 import FriendRequest from '../components/FriendRequest';
 import Friends from '../components/Friends';
 import UserList from '../components/UserList';
+import MyGroup from '../components/MyGroup';
+import BlockUser from '../components/BlockUser';
 
 const Home = () => {
   const auth = getAuth();
@@ -36,14 +38,16 @@ const Home = () => {
         </Grid>
         <Grid item xs={4}>
           <Search/>
-          <Grouplist/>
+          <GroupList/>
           <FriendRequest/>
         </Grid>
         <Grid item xs={3}>
-          <Friends/>
+          <Friends item="date"/>
+          <MyGroup/>
         </Grid>
         <Grid item xs={3}>
           <UserList></UserList>
+          <BlockUser/>
         </Grid>
       </Grid>
 

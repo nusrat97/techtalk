@@ -144,7 +144,7 @@ const Registration = () => {
         </Grid>
         
         <Grid item xs={6}>
-            <img style={{width:'100%', height:'100vh'}} src='./assets/images/registration.png'/>
+            <img style={{width:'100%', height:'100vh'}} src='./assets/images/registration.png' alt='registration-pic'/>
         </Grid>
         </Grid>
     </section>
